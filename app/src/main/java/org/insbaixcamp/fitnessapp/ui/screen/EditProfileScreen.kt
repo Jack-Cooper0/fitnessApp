@@ -33,7 +33,7 @@ fun EditProfileScreen(
     email: String,
     dataNaixement: String,
     genere: String,
-    alçada: Int,
+    altura: Int,
     pes: Double,
     pesObjectiu : Double,
     objectiu: String,
@@ -44,7 +44,7 @@ fun EditProfileScreen(
     var emailNou: String by remember { mutableStateOf(email) }
     var dataNaixementNou: String by remember { mutableStateOf(dataNaixement) }
     var genereNou: String by remember { mutableStateOf(genere) }
-    var alçadaNou: Int by remember { mutableStateOf(alçada) }
+    var alturaNou: Int by remember { mutableStateOf(altura) }
     var pesNou: Double by remember { mutableStateOf(pes) }
     var pesObjectiuNou: Double by remember { mutableStateOf(pesObjectiu) }
     var objectiuNou:String by remember { mutableStateOf(objectiu) }
@@ -112,9 +112,9 @@ fun EditProfileScreen(
             modifier = Modifier.padding(top = 16.dp, start = 8.dp))
         Row(modifier = Modifier.fillMaxWidth()){
             OutlinedTextField(
-                value = alçadaNou.toString(),
-                onValueChange = { alçadaNou = it.toIntOrNull() ?: 0 },
-                label = { Text("Alçada (cm)") },
+                value = alturaNou.toString(),
+                onValueChange = { alturaNou = it.toIntOrNull() ?: 0 },
+                label = { Text("altura (cm)") },
                 modifier = Modifier.weight(1f).padding(start = 8.dp, end = 4.dp),
 
                 )
@@ -143,7 +143,7 @@ fun EditProfileScreen(
                 .padding(8.dp)
                 .fillMaxWidth(),
         )
-        Button(onClick = { guardar(nomNou,emailNou,dataNaixementNou,genereNou,alçadaNou,pesNou,pesObjectiuNou,objectiuNou,nivellActivitatNou) }) {
+        Button(onClick = { guardar(nomNou,emailNou,dataNaixementNou,genereNou,alturaNou,pesNou,pesObjectiuNou,objectiuNou,nivellActivitatNou) }) {
             Text("Guardar dades")
         }
 

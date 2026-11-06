@@ -41,7 +41,7 @@ fun FitnessApp(){
             var email:String by remember { mutableStateOf("laia.soler@exemple.com") }
             var dataNaixement: String by remember { mutableStateOf("16/10/1999") }
             var genere:String by remember { mutableStateOf("Dona") }
-            var alçada:Int by remember { mutableStateOf(170) }
+            var altura:Int by remember { mutableStateOf(170) }
             var pes:Double by remember { mutableStateOf(60.0) }
             var pesObjectiu:Double by remember { mutableStateOf(60.0) }
             var objectiu:String by remember { mutableStateOf("Guanyar massa muscular") }
@@ -49,13 +49,13 @@ fun FitnessApp(){
             var editant: Boolean by remember { mutableStateOf(true) }
 
             if(editant){
-                EditProfileScreen(nom, email, dataNaixement, genere, alçada,
-                    pes, pesObjectiu,objectiu, nivellActivitat,{nomN, emailN, dataNaixementN, genereN, alçadaN,pesN, pesObjectiuN, objectiuN, nivellActivitatN ->
+                EditProfileScreen(nom, email, dataNaixement, genere, altura,
+                    pes, pesObjectiu,objectiu, nivellActivitat,{nomN, emailN, dataNaixementN, genereN, alturaN,pesN, pesObjectiuN, objectiuN, nivellActivitatN ->
                         nom = nomN
                         email = emailN
                         dataNaixement = dataNaixementN
                         genere = genereN
-                        alçada = alçadaN
+                        altura = alturaN
                         pes = pesN
                         pesObjectiu = pesObjectiuN
                         objectiu = objectiuN
@@ -63,7 +63,7 @@ fun FitnessApp(){
                         editant = false
                     })
             }else{
-                ProfileScreen(nom, email, dataNaixement, genere, alçada,
+                ProfileScreen(nom, email, dataNaixement, genere, altura,
                     pes,objectiu, nivellActivitat,
                     { editant = true })
             }

@@ -32,7 +32,7 @@ fun ProfileScreen(
     email: String,
     dataNaixement: String,
     genere: String,
-    alçada: Int,
+    altura: Int,
     pes: Double,
     objectiu: String,
     nivellActivitat: String,
@@ -101,11 +101,11 @@ fun ProfileScreen(
                 }
                 Column() {
                     Text(
-                        "Alçada",
+                        "altura",
                         color = Color.Gray
                     )
                     Text(
-                        "$alçada cm",
+                        "$altura cm",
                         fontWeight = FontWeight.Bold
                     )
                 }
